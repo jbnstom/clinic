@@ -1,0 +1,48 @@
+<h4>Appointment Booking</h4>
+<table>
+  <tr>
+    <td>Speciality:</td>
+    <td>
+      <select [(ngModel)]="special" (change)="docdisplay($event.target.value)">
+        <option *ngFor="let f of deptname" [value]="f.depart_id">{{f.departname}}</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td>
+      Doctor:
+    </td>
+    <td>
+      <select [(ngModel)]="doc">
+        <option *ngFor="let f of docname" [value]="f.iddoc">{{f.docname}}</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Date: 
+    </td>
+    <td>
+      <input type="date" [(ngModel)]="date" />
+    </td>
+  </tr>
+  <tr>
+    <td *ngIf='shoWToken==true'>
+      <button type="button" class="btn btn-default btn-xl" font-color="white"
+        (click)="Temp_appc(special,doc,date)">Generate Token</button>
+    </td>
+    <td *ngIf='shoAppointment==true'>
+      <button type="button" class="btn btn-default btn-xl" font-color="white"
+        (click)="appc(special,doc,date)">Book Appointment</button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button type="button" class="btn btn-default btn-xl" font-color="white">Cancel</button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button type="button" class="btn btn-default btn-xl" font-color="white">Edit</button>
+    </td>
+  </tr>
+</table>

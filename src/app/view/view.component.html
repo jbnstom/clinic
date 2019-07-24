@@ -1,0 +1,46 @@
+<div class="view">
+  <h2 align="center">Registration details</h2>
+  <div class="col-lg-12 col-md-12">
+  <input type="text" [(ngModel)]="v123" (input)="search123($event.target.value);" minlength=10 maxlength=15>
+  </div>
+  <br>
+  <table align="center" cellpadding="5" style="background: white" width="80%">
+    <tr>
+      <th>ID</th>
+      <th>firstname</th>
+      <th>surname</th>
+      <th>address</th>
+      <th>age</th>
+      <th>dob</th>
+      <th>gender</th>
+      <th>ph number</th>
+      <th>Action</th>
+    </tr>
+
+    <tr *ngFor="let x of registrationList;index as i">
+      <td>{{i+1}}</td>
+      <td>{{x.fname}}</td>
+      <td>{{x.sname}}</td>
+      <td>{{x.address}}</td>
+      <td>{{x.age}}</td>
+      <td>{{x.dob}}</td>
+      <td>{{x.gender}}</td>
+      <td>{{x.phnbr}}</td>
+      <td>
+        <a routerLink="/EditReg/{{x.patient_id}}"><button class="btn btn-success">Edit</button></a> &nbsp;
+        <button (click)="deleted(x.patient_id)" class="btn btn-danger confirm-delete">Delete</button> &nbsp;
+        <a routerLink="/appointment/{{x.patient_id}}"><button class="btn-success">Book Appointment</button></a>
+
+      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="9" align="center"><a class="button" routerLink="/" class="btn btn-warning">Back</a></td>
+    </tr>
+
+    <tr>
+      <td colspan="9" align="center"><a class="button" routerLink="/viewapp" class="btn btn-warning">View Appointment</a></td>
+    </tr>
+
+  </table>
+</div>

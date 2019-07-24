@@ -1,0 +1,21 @@
+<table align="center" cellpadding="5" style="background: white" width="80%">
+  <tr>
+    <th>ID</th>
+    <th>Patient</th>
+    <th>Doctor</th>
+    <th>Tocken No</th>
+  </tr>
+
+  <tr *ngFor="let x of appointmentlist;index as i">
+    <td>{{i+1}}</td>
+    <td>{{x.fname}}</td>
+    <td>{{x.sname}}</td>
+    <td>{{x.address}}</td>
+    <td>{{x.age}}</td>
+  </tr>
+  
+  <tr>
+    <td colspan="9" align="center"><a class="button" routerLink="/" class="btn btn-warning">Back</a></td>
+  </tr>
+
+</table>

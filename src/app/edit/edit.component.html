@@ -1,0 +1,56 @@
+<div class="maind col-sm-12 col-md-12 col-lg-12">
+
+    <h2 align="center">Update registration details</h2>
+    <div class="form-group col-sm-12 col-md-12 col-lg-12">
+
+
+        <label for="fname">First Name</label>
+
+        <input type="text" class="form-control" *ngIf="editList" [(ngModel)]="editList.fname" minlength=10 maxlength=10
+            (keypress)="keyPress1($event)" />
+
+        <h6></h6>
+        <label for="sname">Last Name </label>
+
+        <input type="text" class="form-control" *ngIf="editList" [(ngModel)]="editList.sname" minlength=10 maxlength=10
+            (keypress)="keyPress1($event)" />
+
+        <h6></h6>
+        <label for="address">Address</label>
+
+        <textarea [(ngModel)]="editList.address" class="form-control"></textarea>
+        <h6></h6>
+        <label for="age">Age</label>
+
+        <input type="number" class="form-control" *ngIf="editList" [(ngModel)]="editList.age" minlength="1" maxlength="3"
+            required />
+
+        <h6></h6>
+
+
+        <label for="dob">Date of Birth</label>
+
+        <input type="date" class="form-control" *ngIf="editList" [(ngModel)]="editList.dob" />
+        <h6></h6>
+        <label for="gender">Gender</label>
+
+        <select class="form-control" *ngIf="editList" [(ngModel)]="editList.gender">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+
+        <h6></h6>
+
+        <label for="phnbr">Phone number</label>
+
+        <input type="tel" class="form-control" *ngIf="editList" [(ngModel)]="editList.phnbr" (keypress)="keyPress($event)"
+            minlength=10 maxlength=15 required />
+        <h6></h6>
+        
+        <div align="center">
+        <button (click)="updatereg()" class="btn btn-success">Update</button> &nbsp; &nbsp; <a class="button" routerLink="/"
+            class="btn btn-warning">Cancel</a>
+
+        </div>
+        
+    </div>

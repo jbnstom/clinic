@@ -1,0 +1,35 @@
+.maind {
+    width: 55%;
+    height: 50%;
+    background-color: white;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+img {
+  width: 100%;
+}
+.btn-xl {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width:50%;
+    background-color: green; 
+    /* font-color: white; */
+    font-family:  'Calibri', 'Trebuchet MS', sans-serif;
+}
+.label{
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+table{
+font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+.form-group-sm .form-control {
+      border-radius: 0;
+}
